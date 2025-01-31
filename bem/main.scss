@@ -9,32 +9,31 @@ body{
 .produtos {
     max-width: 640px;
     width: 100%;
-    margin: 56px auto;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 1%;
+    padding: 10px;
 
-    .produto {
-        margin: 10px;
-    
-        &.em-destaque {
-            &:hover {
-                border: 2px solid gold;
-                padding: 8px;
-                background-color: #ffae00;
-                position: relative;  /* Para o z-index funcionar */
-                transition: all 0.3s ease;  /* Transição suave */
+        .produto{
+            margin: 12px;
+
+            &--destaque:hover {
+                    border: 2px solid gold;
+                    padding: 8px;
+                    background-color: #ffae00;
+                    position: relative;  /* Para o z-index funcionar */
+                    transition: all 0.3s ease;  /* Transição suave */
+                }
             }
-        }
-    }
-    .produto-imagem{
+    .produto__imagem{
         width: 100%;
     }
-    .produto-nome{
+    .produto__nome{
         font-size: 1.2em;
         margin: 8px 0;
     }
-    .produto-descricao{
+    .produto__descricao{
         color: rgb(94, 94, 94);
     }
     button{
